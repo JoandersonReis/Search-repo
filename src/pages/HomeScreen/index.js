@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, TextInput, TouchableOpacity } from 'react-native'
+import { View, TextInput, TouchableOpacity, Keyboard } from 'react-native'
 import Feather from "react-native-vector-icons/Feather"
 
 import styles from "./styles"
@@ -30,6 +30,7 @@ function HomeScreen() {
       setInfo(response.data)
 
       setRepo("")
+      Keyboard.dismiss()
     } catch(err) {
       setBdColor("#ff3838")
     }

@@ -1,6 +1,8 @@
 import React from 'react'
-import { StatusBar } from "react-native"
+import { StatusBar, YellowBox } from "react-native"
 import Routes from "./routes"
+
+YellowBox.ignoreWarnings(["Error: java.lang.Boolean cannot be cast", "Error: java.lang.Double cannot"])
 
 function App() {
   return (

@@ -6,6 +6,7 @@ export default StyleSheet.create({
    backgroundColor: "#f1f1ee"
   },
 
+  // Parte de Busca e header
   searchContainer: {
     flexDirection: "row",
     backgroundColor: "#364146",
@@ -20,6 +21,7 @@ export default StyleSheet.create({
     borderRadius: 15,
     fontSize: 20
   },
+
   searchBtn: {
     borderRadius: 50,
     backgroundColor: "#0097e6",
@@ -28,6 +30,8 @@ export default StyleSheet.create({
     justifyContent: "center"
   },
 
+
+  // Sem busca
   noSearchText: {
     fontSize: 30,
     color: "#999",
@@ -36,6 +40,8 @@ export default StyleSheet.create({
     fontWeight: "bold"
   },
 
+
+  // Repositório buscado
   containerRepo: {
     backgroundColor: "#FFF",
     width: "90%",
@@ -81,7 +87,6 @@ export default StyleSheet.create({
     fontWeight: "bold"
   },
 
-
   description: {
     fontSize: 16,
     lineHeight: 20,
@@ -89,7 +94,6 @@ export default StyleSheet.create({
     textAlign: "justify",
     paddingHorizontal: 5,
   },
-
 
   repoInfoContainer: {
     marginTop: 20,
@@ -108,6 +112,7 @@ export default StyleSheet.create({
   },
 
 
+  // Botão de ver mais
   seeMoreBtn: {
     marginTop: 30,
     flexDirection: "row",

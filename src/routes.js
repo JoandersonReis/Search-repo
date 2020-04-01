@@ -1,6 +1,7 @@
 import React from "react"
 import { NavigationContainer } from "@react-navigation/native"
 import { createDrawerNavigator } from "@react-navigation/drawer"
+import { Text, AsyncStorage } from "react-native"
 
 const Drawer = createDrawerNavigator()
 
@@ -24,9 +25,17 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home" drawerContentOptions={drawerBarStyle}>
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Favorites" component={FavoritesScreen} />
-        <Drawer.Screen name="WebView" component={WebViewScreen} />
+        <Drawer.Screen name="Home" component={HomeScreen} options={{title: "Buscar"}} />
+        <Drawer.Screen name="Favorites" component={FavoritesScreen} options={{title: "Favoritos"}} />
+        <Drawer.Screen 
+          name="WebView" 
+          component={WebViewScreen} 
+          options={{
+            drawerLabel: (focused, color) => {
+              return <Text style={{display: "none"}}></Text>
+            }
+          }} 
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   )

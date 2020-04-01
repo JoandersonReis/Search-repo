@@ -33,18 +33,18 @@ function RenderRepo({ info, username }) {
     if(info != "") {
       changeStarColor()
     }
-  }, [username])
+  }, [info.id])
 
   async function handleAddFavorite() {
     const realm = await getRealm()
 
     const data = {
       id: info.id,
-      repoName: info.name,
+      repoName: info.name || info.owner.login,
       repoUrl: info.svn_url,
       avatarUrl: info.owner.avatar_url,
       username,
-      description: info.description,
+      description: info.description || "Nenhuma Descrição",
       stars: info.stargazers_count,
       forks: info.forks
     }
@@ -57,7 +57,7 @@ function RenderRepo({ info, username }) {
   }
 
   if(info == "") {
-    return <Text style={styles.noSearchText}>Busque um repositorio</Text>
+    return <Text style={styles.noSearchText}>Busque um repositório</Text>
   } else {
     return (
       <View style={styles.containerRepo}>

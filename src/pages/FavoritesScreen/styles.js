@@ -6,7 +6,7 @@ export default StyleSheet.create({
     backgroundColor: "#f1f1ee"
   },
 
-
+  // Header da aplicação
   header: {
     backgroundColor: "#364146",
     flexDirection: "row",
@@ -25,6 +25,7 @@ export default StyleSheet.create({
   },
 
 
+  // Exibição do Repositório
   containerRepo: {
     backgroundColor: "#FFF",
     width: "90%",
@@ -69,7 +70,6 @@ export default StyleSheet.create({
     fontWeight: "bold"
   },
 
-
   description: {
     fontSize: 16,
     lineHeight: 20,
@@ -77,7 +77,6 @@ export default StyleSheet.create({
     textAlign: "justify",
     paddingHorizontal: 5,
   },
-
 
   repoInfoContainer: {
     marginTop: 20,
@@ -96,6 +95,7 @@ export default StyleSheet.create({
   },
 
 
+  // Bot~]ao de ver mais
   seeMoreBtn: {
     marginTop: 30,
     flexDirection: "row",
@@ -113,5 +113,20 @@ export default StyleSheet.create({
     marginLeft: 5,
     fontSize: 17,
     fontWeight: "bold"
+  },
+
+
+  // Botão de Refresh
+  refreshBtn: {
+    borderRadius: 50,
+    height: 60,
+    width: 60,
+    backgroundColor: "#0097e6",
+    padding: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    bottom: 10,
+    right: 10
   }
 })

@@ -13,13 +13,12 @@ function FavoritesScreen() {
   const [favorites, setFavorites] = useState([])
   const navigation = useNavigation()
 
+
   async function loadFavorites() {
     const realm = await getRealm()
 
     const data = realm.objects("Favorites")
     let arr = Array.from(data)
-
-    console.log(arr)
     
     setFavorites(arr)
   }
@@ -33,7 +32,7 @@ function FavoritesScreen() {
 
     realm.write(() => {
       let favorite = realm.objects("Favorites").filtered(`id=${id}`)
-
+      
       realm.delete(favorite)
     })
 
@@ -99,6 +98,11 @@ function FavoritesScreen() {
         showsVerticalScrollIndicator={false}
         renderItem={renderItem}
       />
+
+      <TouchableOpacity
+        style={styles.refreshBtn}
+        onPress={() => loadFavorites()}
+      ><Feather name="refresh-ccw" size={25} color="#FFF" /></TouchableOpacity>
     </View>
   )
 }
